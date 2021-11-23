@@ -23,19 +23,14 @@ def solve_puzzle(Board, Source, Destination):
     bb[x][y] = True
     visited = [Source]
     while len(rowq) > 0:
-        # x = rowq.pop(0)
-        # y = colq.pop(0)
         x = rowq.pop()
         y = colq.pop()
 
         if bb[dx][dy] is True:
-            # break
             return visited
         if Board[x][y] == '#' or Board[dx][dy] == '#':
             return visited
         directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]
-        # for i in range(4):
-
         for i in directions:
             xx = x + i[0]
             yy = y + i[1]
@@ -55,13 +50,6 @@ def solve_puzzle(Board, Source, Destination):
             if (xx, yy) not in visited:
                 visited.append((xx, yy))
             break
-
-            # if (x, y) not in visited:
-            #     visited.append((x, y))
-                # bb[x][y] = True
-        # if (x, y) not in visited:
-        #     visited.append((x, y))
-    # return visited
     return None
 
 bb = [['-', '-', '-', '-', '-'],
