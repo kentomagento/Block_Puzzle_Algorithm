@@ -22,5 +22,7 @@ Input board:
 
 Example: (a, b): (1, 2); (x, y): (3,3)
 output: 3
+        
         possible direction to travel: LDDR
+        
         (1, 3) -> (1, 2) -> (2, 2) -> (3, 2) -> (3, 3) 
